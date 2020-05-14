@@ -19,6 +19,8 @@
         crossorigin="anonymous"></script>
     <!-- BOOTSWATCH LUX -->
     <link rel="stylesheet" href="static/css/bootstrap.css">
+    <!-- CUSTOM JS -->
+    <script src="static/js/main.js"></script>
 </head>
 
 <body>
@@ -94,25 +96,22 @@
                                             <input type="radio" id="customRadio8" name="customRadioC"
                                                 class="custom-control-input">
                                             <label class="custom-control-label" for="customRadio8">Muy alta (>15 y
-                                                <=40)< /label>
+                                                <=40)</label>
                                         </div>
                                         <div class="custom-control custom-radio">
                                             <input type="radio" id="customRadio9" name="customRadioC"
                                                 class="custom-control-input">
-                                            <label class="custom-control-label" for="customRadio9">Alta (>10 y <=15)<
-                                                    /label>
+                                            <label class="custom-control-label" for="customRadio9">Alta (>10 y <=15)</label>
                                         </div>
                                         <div class="custom-control custom-radio">
                                             <input type="radio" id="customRadio10" name="customRadioC"
                                                 class="custom-control-input">
-                                            <label class="custom-control-label" for="customRadio10">Media (>5 y <=10)<
-                                                    /label>
+                                            <label class="custom-control-label" for="customRadio10">Media (>5 y <=10)</label>
                                         </div>
                                         <div class="custom-control custom-radio">
                                             <input type="radio" id="customRadio11" name="customRadioC"
                                                 class="custom-control-input">
-                                            <label class="custom-control-label" for="customRadio11">Baja (>=0 y <=5)<
-                                                    /label>
+                                            <label class="custom-control-label" for="customRadio11">Baja (>=0 y <=5)</label>
                                         </div>
                                     </div>
                                 </td>
