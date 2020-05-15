@@ -21,6 +21,12 @@
     <link rel="stylesheet" href="static/css/bootstrap.css">
     <!-- CUSTOM JS -->
     <script src="static/js/main.js"></script>
+    <!-- ALERTIFY 1.13.1 -->
+    <link rel="stylesheet" href="static/alertify/css/alertify.css">
+    <link rel="stylesheet" href="static/alertify/css/themes/default.min.css">
+    <script src="static/alertify/alertify.js"></script>
+    <!-- JQuery -->
+    <script src="static/js/jQuery.js"></script>
 </head>
 
 <body>
@@ -29,88 +35,85 @@
         <div class="row justify-content-center pt-5">
             <div class="card text-center" style="width: 130vh;">
                 <div class="card-body" style="border-top: 5px solid #1a1a1a;">
-                    <h5 class="card-title">PUNTO DE COMPROBACIÓN</h5>
-                    <p class="card-text">El centro de trabajo cuenta con entradas y salidas exclusivas del personal, en
-                        caso Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque ullam quasi in? Repellat,
-                        et harum aut eius placeat omnis similique officiis sequi voluptate tenetur dignissimos quidem
-                        maiores voluptatum cumque amet.</p>
+                    <h4 class="card-title text-monospace">PUNTO DE COMPROBACIÓN</h4>
+                    <p id="checkPoint" class="card-text text-justify" style="font-size: medium;"></p>
                     <hr>
-                    <table class="table table-borderless table-sm" style="width: 100%;">
+                    <table class="table table-borderless table-sm" style="width: 100%; font-size: small;">
                         <thead>
                             <tr class="text-center">
-                                <th scope="col">Controles de riesgo</th>
-                                <th scope="col">Nivel de contacto entre trabajadores</th>
-                                <th scope="col">Riesgo de contagio</th>
+                                <th scope="col" class="text-monospace">Controles de riesgo</th>
+                                <th scope="col" class="border-left text-monospace">Nivel de contacto entre trabajadores</th>
+                                <th scope="col" class="border-left text-monospace">Riesgo de contagio</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="text-left">
+                            <tr class="text-center">
                                 <td>
                                     <div class="form-group">
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio1" name="customRadioA"
-                                                class="custom-control-input">
+                                            <input type="radio" id="customRadio1" name="controlesDeRiesgo"
+                                                class="custom-control-input" value="1">
                                             <label class="custom-control-label" for="customRadio1">Si (0)</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio2" name="customRadioA"
-                                                class="custom-control-input">
+                                            <input type="radio" id="customRadio2" name="controlesDeRiesgo"
+                                                class="custom-control-input" value="2">
                                             <label class="custom-control-label" for="customRadio2">Parcial (5)</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio3" name="customRadioA"
-                                                class="custom-control-input">
+                                            <input type="radio" id="customRadio3" name="controlesDeRiesgo"
+                                                class="custom-control-input" value="3">
                                             <label class="custom-control-label" for="customRadio3">No (10)</label>
                                         </div>
                                     </div>
                                 </td>
-                                <td>
+                                <td class="border-left">
                                     <div class="form-group">
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio4" name="customRadioB"
-                                                class="custom-control-input">
+                                            <input type="radio" id="customRadio4" name="nivelContacto"
+                                                class="custom-control-input" value="1">
                                             <label class="custom-control-label" for="customRadio4">Continua (4)</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio5" name="customRadioB"
-                                                class="custom-control-input">
+                                            <input type="radio" id="customRadio5" name="nivelContacto"
+                                                class="custom-control-input" value="2">
                                             <label class="custom-control-label" for="customRadio5">Frecuentemente
                                                 (3)</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio6" name="customRadioB"
-                                                class="custom-control-input">
+                                            <input type="radio" id="customRadio6" name="nivelContacto"
+                                                class="custom-control-input" value="3">
                                             <label class="custom-control-label" for="customRadio6">Ocacional (2)</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio7" name="customRadioB"
-                                                class="custom-control-input">
+                                            <input type="radio" id="customRadio7" name="nivelContacto"
+                                                class="custom-control-input" value="4">
                                             <label class="custom-control-label" for="customRadio7">Esporádica
                                                 (1)</label>
                                         </div>
                                     </div>
                                 </td>
-                                <td>
+                                <td class="border-left">
                                     <div class="form-group">
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio8" name="customRadioC"
-                                                class="custom-control-input">
+                                            <input type="radio" id="customRadio8" name="riesgoContagio"
+                                                class="custom-control-input" value="1">
                                             <label class="custom-control-label" for="customRadio8">Muy alta (>15 y
                                                 <=40)</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio9" name="customRadioC"
-                                                class="custom-control-input">
+                                            <input type="radio" id="customRadio9" name="riesgoContagio"
+                                                class="custom-control-input" value="2">
                                             <label class="custom-control-label" for="customRadio9">Alta (>10 y <=15)</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio10" name="customRadioC"
-                                                class="custom-control-input">
+                                            <input type="radio" id="customRadio10" name="riesgoContagio"
+                                                class="custom-control-input" value="3">
                                             <label class="custom-control-label" for="customRadio10">Media (>5 y <=10)</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio11" name="customRadioC"
-                                                class="custom-control-input">
+                                            <input type="radio" id="customRadio11" name="riesgoContagio"
+                                                class="custom-control-input" value="4">
                                             <label class="custom-control-label" for="customRadio11">Baja (>=0 y <=5)</label>
                                         </div>
                                     </div>
@@ -118,16 +121,15 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>
-                <div class="card-footer">
+                    <hr>
                     <div class="row">
                         <div class="col-6 text-left">
                             Pregunta
-                            <span class="px-1"></span>
-                            <span class="badge badge-primary badge-pill">1/70</span>
+                            <span class="pl-1"></span>
+                            <div id="position" class="badge badge-primary badge-pill pb-1"></div>
                         </div>
                         <div class="col-6 text-right">
-                            <button class="btn btn-primary btn-sm text-right">Guardar</button>
+                            <button id="btnNext" class="btn btn-outline-primary btn-sm text-right">Siguiente</button>
                         </div>
                     </div>
                 </div>
@@ -135,6 +137,8 @@
         </div>
     </div>
 
+    <!-- temps -->
+    <input type="text" id="totalPoints" value="1" class="d-none"></input>
 </body>
 
 </html>
